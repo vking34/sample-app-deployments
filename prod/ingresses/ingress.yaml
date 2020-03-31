@@ -8,7 +8,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /staging
+      - path: /
         backend:
           serviceName: sample-service
           servicePort: 80

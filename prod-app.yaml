@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: production-sample-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/vking34/sample-app-deployments.git
+    targetRevision: HEAD
+    path: prod/
+    directory:
+      recurse: true
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: ms
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false
