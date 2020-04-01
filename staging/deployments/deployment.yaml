@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: sample-app
-        image: vking34/sample-app:33e4658
+        image: vking34/sample-app:d5355d4
         imagePullPolicy: Always
         ports:
         - containerPort: 80
